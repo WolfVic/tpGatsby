@@ -65,7 +65,6 @@ import Drawer from '../components/Drawer'
 import Link from 'gatsby-link'
 import TextField from 'material-ui/TextField'
 
-const drawerWidth = 240;
 
 const theme = createMuiTheme({
   palette: {
@@ -172,7 +171,7 @@ const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 50,
+    width: 50
   }
 })
 
@@ -426,7 +425,7 @@ export default withStyles(styles, { withTheme: true })(class App extends Compone
               <Grid container>
                 <Grid item xs={12}>
                   <div>
-                  <Options
+                    <Options
                       aleatoire= {this.state.aleatoire}
                       handleInputChange = {this.handleInputChange}
                       handleClick = {this.handleClick}
@@ -449,29 +448,29 @@ export default withStyles(styles, { withTheme: true })(class App extends Compone
                   </div>
                 </Grid>
                 <Grid item xs={12}>
-                <main className={classes.content}>
-                <Tableau
-                  handleSelect = {this.handleSelect}
-                  handleQuestion = {this.handleQuestion}
-                  tp = {this.state.tp}
-                  tpRandom={this.state.tpRandom}
-                  tpExclu = {this.state.tpExclu}
-                  colonne= {this.state.colonne}
-                  aleatoire = {this.state.aleatoire}
-                  limite = {this.state.limite}
-                  handleReponse = {this.handleReponse}
-                  affReponse = {this.state.afficherReponse}
-                  selectionPage = {this.state.selectionPage}
-                  handleCheck = {this.handleCheck}
-                  selectAllChbx = {this.state.selectAllChbx}
-                  handleSelectionTpClose = {this.handleSelectionTpClose}
-                  selectAll = {this.selectAll}
-                  classes = {classes}
-                />
-              </main> 
+                  <main className={classes.content}>
+                    <Tableau
+                      handleSelect = {this.handleSelect}
+                      handleQuestion = {this.handleQuestion}
+                      tp = {this.state.tp}
+                      tpRandom={this.state.tpRandom}
+                      tpExclu = {this.state.tpExclu}
+                      colonne= {this.state.colonne}
+                      aleatoire = {this.state.aleatoire}
+                      limite = {this.state.limite}
+                      handleReponse = {this.handleReponse}
+                      affReponse = {this.state.afficherReponse}
+                      selectionPage = {this.state.selectionPage}
+                      handleCheck = {this.handleCheck}
+                      selectAllChbx = {this.state.selectAllChbx}
+                      handleSelectionTpClose = {this.handleSelectionTpClose}
+                      selectAll = {this.selectAll}
+                      classes = {classes}
+                    />
+                  </main>
                 </Grid>
-               <br />
-              
+                <br />
+
               </Grid>
               <Alert stack={{limit: 3}} />
             </div>
@@ -748,7 +747,7 @@ var Options = function (props) {
                   type="number"
                   className={classes.textField}
                   InputLabelProps={{
-                    shrink: true,
+                    shrink: true
                   }}
                   margin="dense"
                 />
@@ -757,7 +756,7 @@ var Options = function (props) {
           </Grid>
           <Grid item >
             <div className={classes.grid}>
-              <Button raised color='secondary' onClick={props.handleSelectionTpOpen}>Selection Tp</Button>              
+              <Button raised color='secondary' onClick={props.handleSelectionTpOpen}>Selection Tp</Button>
             </div>
           </Grid>
           <Grid item >
